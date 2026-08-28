@@ -34,8 +34,13 @@
                         <TextBlock Text="{Binding Path=., Converter={StaticResource EnumNameConverter}}" />
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
+
             </ComboBox>
+
         </controls:OptionControl>
+            <controls:OptionControl Header="Gray Sky">
+                <ui:ToggleSwitch IsChecked="{Binding GraySkyEnabled, Mode=TwoWay}" />
+            </controls:OptionControl>
 
         <controls:OptionControl 
             Header="{x:Static resources:Strings.Menu_FastFlags_Presets_FixDisplayScaling_Title}" 
