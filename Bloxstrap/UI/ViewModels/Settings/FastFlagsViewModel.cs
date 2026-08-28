@@ -35,6 +35,12 @@ namespace Bloxstrap.UI.ViewModels.Settings
             set => App.FastFlags.SetPreset("Rendering.MSAA", MSAALevels[value]);
         }
 
+        public bool GraySkyEnabled
+        {
+            get => App.FastFlags.GetPreset("Rendering.SkyGray") == "True";
+            set => App.FastFlags.SetPreset("Rendering.SkyGray", value ? "True" : null);
+        }
+
         public bool FixDisplayScaling
         {
             get => App.FastFlags.GetPreset("Rendering.DisableScaling") == "True";
